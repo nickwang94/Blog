@@ -17,6 +17,10 @@ export default {
         langSetting: '语言设置',
         zh: '中文',
         en: '英文',
+        popupMsg: {
+            title: '系统提示',
+            changeLangMsg: '系统语言已设置成功'
+        },
         success: '成功'
     }
 }

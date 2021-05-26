@@ -17,6 +17,10 @@ export default {
         langSetting: 'Language Setting',
         zh: 'Chinese',
         en: 'English',
+        popupMsg: {
+            title: 'System Hint',
+            changeLangMsg: 'The system language has been set successfully'
+        },
         success: 'Success'
     }
 }

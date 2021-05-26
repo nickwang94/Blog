@@ -1,7 +1,7 @@
 <template>
     <div class="header">
-        <h1 style="margin-left: 1rem">{{ $t("msg.title") }}</h1>
-        <div class="nav" style="margin-left: 1rem">
+        <h1 class="logo">{{ $t("msg.title") }}</h1>
+        <div class="nav">
             <el-menu
                 :default-active="activeIndex"
                 class="el-menu-demo"
@@ -81,12 +81,26 @@ export default {
     methods: {
         selectChange (value) {
             this.$i18n.locale = value;
-        }
+            this.openMsg(this.$t("popupMsg.changeLangMsg"));
+        },
+        openMsg (msg) {
+            const h = this.$createElement;
+            this.$notify({
+                title: this.t("popupMsg.title"),
+                message: h('i', { style: 'color: teal'}, msg),
+                type: 'success',
+                position: 'bottom-left'
+            });
+        },
     }
 }
 </script>
 
 <style scoped>
+    .logo {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
     .header {
         background-color: #545c64;
         color: #ffd04b;

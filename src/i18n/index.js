@@ -6,4 +6,4 @@ import messages from './lang'
 export default new VueI18n({
     locale: 'zh',
     messages
-})
+});

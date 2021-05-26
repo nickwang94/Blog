@@ -1,9 +1,9 @@
 <template>
-    <div height="300px" class="footer">
+    <div height="150px" class="footer">
         <div class="info">
-            <div class="info-block">1</div>
-            <hr class="divide-line">
-            <div class="info-block">2</div>
+            <div class="info-block">
+                <div class="img-div"><img src="../../assets/aboutMe.jpg" class="img"/></div>
+            </div>
             <hr class="divide-line">
             <div class="info-block">
                 <h3>{{ $t("msg.info.contactMe") }}</h3>
@@ -13,10 +13,10 @@
             <hr class="divide-line">
             <div class="info-block">
                 <h3>{{ $t("msg.info.aboutMe") }}</h3>
-                <div style="margin: 10px"> {{ $t("msg.info.intro") }} </div>
+                <div style="margin-left: 100px; margin-right: 100px;"> {{ $t("msg.info.intro") }} </div>
             </div>
         </div>
-        <el-divider direction="horizontal"></el-divider>
+        <hr class="divide-line-horizatal">
         <div class="copyright">
             Copyright©2016-2021 Designed by Nick
         </div>
@@ -43,34 +43,53 @@ export default {
 <style scoped>
     .footer {
         background-color: #545c64;
-        color: #ffd04b;
+        color: #babab3;
         bottom: 0;
         width: 100%;
+    }
+    .img-div{
+        width:140px;
+        height:140px;
+        text-align:center;
+        z-index: 1;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #E9EEF3;
+        border-radius: 5px;
+    }
+    .img{
+        width:120px;
     }
     .info-block {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 25%;
-
+        width: 33%;
     }
     .divide-line {
-        margin-top: 20px;
-        color: #E9EEF3;
+        color: #babab3;
+        align: center;
+        margin: 30px;
+        padding: 0px;
+    }
+    .divide-line-horizatal {
+        color: #babab3;
+        margin: 0px;
+        padding: 0px;
     }
     .info {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        height: 250px;
+        height: 200px;
     }
     .copyright {
-        height: 50px;
-        display: flex;
-        justify-content: center;
+        height: 20px;
+        line-height: 20px;
         font-weight: bold;
+        text-align:center;
+        padding: 10px;
     }
 </style>

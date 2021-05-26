@@ -20,12 +20,16 @@ export default {
 </script>
 
 <style scoped>
+    .el-header, .el-main, .el-footer{
+        padding: 0px;
+        margin: 0px;
+    }
     .home {
         height: 100rem;
         width: 100%;
         position: relative;
         min-height: 100%;
-        background-color: #E9EEF3;
+        background-color: #545c64;
         display: flex;
         flex-direction: row;
     }
