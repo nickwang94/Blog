@@ -21,5 +21,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 </style>
